@@ -44,14 +44,20 @@ int ProcurarVetor(int * vetor, int n, int q, int * pos) {
  Retorna a posicao do segundo maior numero.
 */
 int SegundoMaior(int * vetor, int n) {
-	int maior=0,segundomaior,i;
+	int maior=0,segundomaior,i,flag=0;
 	for(i=1;i<n;i++){
 		if(vetor[i]>vetor[maior]) {
 			segundomaior=maior;
 			maior=i;
+			flag=1;
 		} else {
-			if(vetor[i]>vetor[segundomaior]) {
+			if(flag==0) {
 				segundomaior=i;
+				flag=1;
+			} else {				
+				if(vetor[i]>vetor[segundomaior]) {
+					segundomaior=i;
+				}
 			}
 		}
 	}
@@ -248,10 +254,10 @@ void main() {
 	
 	int vetor[n];
 	
-//	LerVetor(vetor,n);
+	LerVetor(vetor,n);
 //	LerVetorRacista(vetor,n);
 //	LerVetorDigito(vetor,n);
-	LerVetorDado(vetor,n);
+//	LerVetorDado(vetor,n);
 
 
 //	printf("Valor mais comum: %d",ResultadoMaisComum(vetor,n));
@@ -274,9 +280,9 @@ void main() {
 //	ImprimirVetor(vetor,n);
 
 
-//	// Segundo Maior Mais alto
-//	if(n>1) 
-//		printf("Segundo maior valor: %d\n",vetor[SegundoMaior(vetor,n)]);
+	// Segundo Maior Mais alto
+	if(n>1) 
+		printf("Segundo maior valor: %d\n",vetor[SegundoMaior(vetor,n)]);
 	
 	
 // // ProcurarVetor	
