@@ -46,10 +46,10 @@ void preencherStruct(aluno_tipo *aluno,int n) {
 			do {
 				printf("Nota da disciplina:");
 				scanf("%d",&aluno[i].disciplinas[j].nota);
-				if(aluno[i].idade<=0) {
-					printf("\nTem de ser superior a 0 \n\n");
+				if(aluno[i].disciplinas[j].nota<0 || aluno[i].disciplinas[j].nota>20)) {
+					printf("\nTem de ser entre 0 e 20 \n\n");
 				}
-			} while(aluno[i].idade<=0);
+			} while(aluno[i].disciplinas[j].nota<0 || aluno[i].disciplinas[j].nota>20);
 		}
 		printf("\n\n");
 		fflush(stdin);
