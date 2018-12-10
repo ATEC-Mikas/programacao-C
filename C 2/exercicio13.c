@@ -289,7 +289,7 @@ void main() {
 //	} else {
 //		printf("O numero %d encontra-se na(s) posicao(coes):",q);
 //		for(i=0;i<r;i++) {
-//			printf("\n%d",pos[i]);
+//			printf("\n%d",pos[i]+1);
 //		}
 //	}
 	
