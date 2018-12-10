@@ -231,7 +231,7 @@ int ResultadoMaisComum(int * vetor, int n) {
 			maior=i;
 		}
 	}
-	return contador[maior];
+	return maior;
 }
 
 void main() {
