@@ -287,7 +287,7 @@ void main() {
 //	if(r==0) {
 //		printf("Numero inexistente");
 //	} else {
-//		printf("O numero %d encontra-se na(s) posicao(coes):");
+//		printf("O numero %d encontra-se na(s) posicao(coes):",q);
 //		for(i=0;i<r;i++) {
 //			printf("\n%d",pos[i]);
 //		}
