@@ -5,7 +5,7 @@
 /*
  LerVetor
  
- Lê um vetor normalmente
+ LÃª um vetor normalmente
  LerVetor(int NomeVetor,int NumeroDeNumeros);
 */
 void LerVetor(int * vetor, int n) {
@@ -22,7 +22,7 @@ void LerVetor(int * vetor, int n) {
  Procura o vetor pelo numero pedido
  
  LerVetor(int NomeVetor, int NumeroDeNumeros);
- Retorna a posicao do numero pedido ou -1 caso não seja encontrado 
+ Retorna a posicao do numero pedido ou -1 caso nÃ£o seja encontrado 
 */
 int ProcurarVetor(int * vetor, int n, int q, int * pos) {
 	int i,c=0;
@@ -52,8 +52,10 @@ int SegundoMaior(int * vetor, int n) {
 			flag=1;
 		} else {
 			if(flag==0) {
-				segundomaior=i;
-				flag=1;
+				if(vec[i]!=vec[maior]) {
+					segundomaior=i;
+					flag=1;
+				}
 			} else {				
 				if(vetor[i]>vetor[segundomaior]) {
 					segundomaior=i;
@@ -67,7 +69,7 @@ int SegundoMaior(int * vetor, int n) {
 /*
  LerVetorRacista
  
- Lê um vetor sem possibilitar numeros repetidos
+ LÃª um vetor sem possibilitar numeros repetidos
  LerVetor(int NomeVetor,int NumeroDeNumeros);
 */
 void LerVetorRacista(int * vetor, int n) {
@@ -90,7 +92,7 @@ void LerVetorRacista(int * vetor, int n) {
 /*
  RacismoNegativo
  
- Põe a 0 todos os numeros negativos
+ PÃµe a 0 todos os numeros negativos
  RacismoNegativo(int NomeVetor,int NumeroDeNumeros);
  Retorna o numero de valores alterados
 */
@@ -125,7 +127,7 @@ void ImprimirVetor(int * vetor, int n ) {
 /*
  VerificarVetor
  
- Verifica se os valores de um vetor são iguais, se são todos diferentes, ou se há valores repetidos no
+ Verifica se os valores de um vetor sÃ£o iguais, se sÃ£o todos diferentes, ou se hÃ¡ valores repetidos no
 vetor.
  VerificarVetor(int NomeVetor,int NumeroDeNumeros);
  Retorna uma string com a resposta
@@ -155,7 +157,7 @@ char * VerificarVetor(int * vetor, int n) {
 /*
  LerVetorDigito
  
- Lê um vetor permintindo apenas um digito
+ LÃª um vetor permintindo apenas um digito
  LerVetorDigito(int NomeVetor,int NumeroDeNumeros);
 */
 void LerVetorDigito(int * vetor, int n) {
@@ -175,7 +177,7 @@ void LerVetorDigito(int * vetor, int n) {
 /*
  ParVetor
  
- Verifica se o vetor é constituído, ou não, por valores pares e ímpares alternados.
+ Verifica se o vetor Ã© constituÃ­do, ou nÃ£o, por valores pares e Ã­mpares alternados.
  ParVetor(int NomeVetor,int NumeroDeNumeros);
 */
 int ParVetor(int * vetor, int n) {
@@ -199,7 +201,7 @@ int ParVetor(int * vetor, int n) {
 /*
  LerVetorDado
  
- Lê um vetor apenas permitindo numeros entre 2 e 12
+ LÃª um vetor apenas permitindo numeros entre 2 e 12
  LerVetorDado(int NomeVetor,int NumeroDeNumeros);
 */
 void LerVetorDado(int * vetor, int n) {
