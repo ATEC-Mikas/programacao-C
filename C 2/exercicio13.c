@@ -63,6 +63,9 @@ int SegundoMaior(int * vetor, int n) {
 			}
 		}
 	}
+	if(flag==0) {
+		segundomaior=0;
+	}
 	return segundomaior;
 }
 
